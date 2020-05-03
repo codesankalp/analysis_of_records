@@ -1,0 +1,19 @@
+==> ANALYSIS OF Task0.py
+time complexity is O(1).
+Reason:- Because there are only print statements
+
+==> ANALYSIS OF Task1.py
+time complexity is O(n).
+Reason:- Because there are two for loops iterating n times but as 2 is constant we can ignore it.
+
+==> ANALYSIS OF Task2.py
+time complexity is O(n).
+Reason:- Because there are three for loops iterating n times but as 3 is constant we can ignore it.
+
+==>ANALYSIS OF Task3.py
+time complexity is O(n).
+Reason:- Because there are two for loops iterating n times but as 2 is constant we can ignore it.
+
+==>ANALYSIS OF Task4.py
+time complexity is O(n).
+Reason:- Because there are two for loops iterating n times but as 2 is constant we can ignore it.
