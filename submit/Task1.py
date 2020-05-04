@@ -28,5 +28,5 @@ for i in range(len(calls)):
     tel_num.append(calls[i][0])
     tel_num.append(calls[i][1])
     
-print(len(set(tel_num)))
+print("There are {} different telephone numbers in the records".format(len(set(tel_num))))
     

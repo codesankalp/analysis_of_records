@@ -43,25 +43,28 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
-codes = []
-set_codes = []
+#part A
+
 print("The numbers called by people in Bangalore have codes:")
-for i in range(len(calls)):
-    if calls[i][0].startswith('(080)'):
-        if calls[i][1].startswith('(0'): 
-            codes.append(calls[i][1][1:].split(")")[0])
-        if calls[i][1].startswith('7') or calls[i][1].startswith('8') or calls[i][1].startswith('9'):
-            codes.append(calls[i][1][0:4])
-        if calls[i][1].startswith('140'):
-            codes.append('140')
-codes = sorted(codes)
-for i in sorted(set(codes)):
+codes = []
+for i in calls:
+    if i[0].startswith('(080)'):
+        if i[1].startswith('('):
+            codes.append(i[1][1:i[1].find(')')])
+        elif i[1][5] == " ":
+            codes.append(i[1][0:4])
+        else:
+            codes.append(i[1][1:4])
+            print(i[1][1:4])
+
+for i in (sorted(set(codes))):
     print(i)
-    set_codes.append(i)
+
 
 #part B
 
-percentage = (set_codes.count('080')/len(set_codes))*100
-print("{:.2f} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format(percentage))
+percentage = (codes.count('080')/len(codes))*100
+
+print("\n{:.2f} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format(percentage))
 
 

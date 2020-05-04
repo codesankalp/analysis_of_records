@@ -20,7 +20,7 @@ Print messages:
 "Last record of calls, <incoming number> calls <answering number> at time <time>, lasting <during> seconds"
 """
 #printing first entry of texts.csv
-print(f"First record of texts,{texts[0][0]} texts {texts[0][1]} at time {texts[0][2]}")
+print("First record of texts,{} texts {} at time {}".format(texts[0][0],texts[0][1],texts[0][2]))
 
 #printing last entry of calls.csv
-print(f"Last record of calls, {calls[-1][0]} calls {calls[-1][1]}  at time {calls[-1][2]} , lasting {calls[-1][3]}  seconds")
+print("Last record of calls, {} calls {}  at time {} , lasting {}  seconds".format(calls[-1][0],calls[-1][1],calls[-1][2],calls[-1][3]))
